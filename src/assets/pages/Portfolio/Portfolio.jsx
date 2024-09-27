@@ -1,8 +1,8 @@
 import React from 'react';
 import './Portfolio.css'
-import projectTwitter from '../../assets/images/project-twitter.png';
-import projectKeyboardChecker from '../../assets/images/project-keyboardchecker.png';
-import projectStopwatch from '../../assets/images/project-stopwatch.png';
+import projectTwitter from '../../images/project-twitter.png';
+import projectKeyboardChecker from '../../images/project-keyboardchecker.png';
+import projectStopwatch from '../../images/project-stopwatch.png';
 
 
 function Portfolio() {

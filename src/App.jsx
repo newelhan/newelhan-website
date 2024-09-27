@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header/Header.jsx';
+import Header from './assets/components/Header/Header.jsx';
 
-import Home from './pages/Home/Home.jsx';
-import Portfolio from './pages/Portfolio/Portfolio.jsx';
-import Contact from './pages/Contact/Contact.jsx';
+import Home from './assets/pages/Home/Home.jsx';
+import Portfolio from './assets/pages/Portfolio/Portfolio.jsx';
+import Contact from './assets/pages/Contact/Contact.jsx';
 
-import Footer from './components/Footer/Footer.jsx'
+import Footer from './assets/components/Footer/Footer.jsx'
 
 function App() {
   return (
