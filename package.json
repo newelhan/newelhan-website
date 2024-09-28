@@ -2,16 +2,9 @@
   "name": "newelhan-resume",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/newelhan/newelhan-website",
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/newelhan/newelhan-website.git"
-  },
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -32,7 +25,6 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
-    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "vite": "^5.4.1"
   }
