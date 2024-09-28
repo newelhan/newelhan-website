@@ -13,7 +13,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} /> 
+        {/* Specific file path for live server build. */}
+        <Route path="/dist/index.html" element={<Home />} /> 
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
