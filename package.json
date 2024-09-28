@@ -1,8 +1,8 @@
 {
-  "homepage": "https://github.com/newelhan/newelhan-website",
   "name": "newelhan-resume",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/newelhan/newelhan-website",
   "type": "module",
   "repository": {
     "type": "git",
