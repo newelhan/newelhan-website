@@ -91,11 +91,16 @@ function Home() {
   return (
     <>
       <section className="hero-section" id="home">
-        <div className="hero-content">
-          <h1 ref={heroTitleRef} className="hero-title">Hi, I'm Ethan</h1>
-          <p ref={heroSubtitleRef} className="hero-subtitle typing-animation"></p>
-        </div>
-        <div className="down-arrow"></div>
+      {/* Video background */}
+      <video className="hero-video" autoPlay loop muted>
+        <source src="../../assets/videos/hero-bg.mp4"/>
+      </video>
+      
+      <div className="hero-content">
+        <h1 ref={heroTitleRef} className="hero-title">Hi, I'm Ethan</h1>
+        <p ref={heroSubtitleRef} className="hero-subtitle typing-animation"></p>
+      </div>
+      <div className="down-arrow"></div>
       </section>
 
       <section className="about-section" id="about">
