@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import heroBg from '../../assets/videos/hero-bg.mp4';
 import './Home.css';
 
 function Home() {
@@ -93,7 +94,7 @@ function Home() {
       <section className="hero-section" id="home">
       {/* Video background */}
       <video className="hero-video" autoPlay loop muted>
-        <source src="../../assets/videos/hero-bg.mp4"/>
+        <source src={heroBg} type="video/mp4" />
       </video>
       
       <div className="hero-content">
