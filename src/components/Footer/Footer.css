@@ -23,6 +23,10 @@
   font-size: 1.2rem;
 }
 
+.social-links a:hover {
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
   .social-links {
