@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import this for navigation
 import './Portfolio.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,9 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 function Portfolio() {
   const portfolioRef = useRef(null);
   const cardsRef = useRef([]);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
-    // Animate the entire section into view
     gsap.fromTo(
       portfolioRef.current,
       { opacity: 0, y: 100 },
@@ -30,7 +31,6 @@ function Portfolio() {
       }
     );
 
-    // Staggered animation for the cards
     gsap.fromTo(
       cardsRef.current,
       { opacity: 0, scale: 0.9, y: 50 },
@@ -70,10 +70,18 @@ function Portfolio() {
     },
   ];
 
+  const handleFooterClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <section className="portfolio-section" ref={portfolioRef}>
       <h1 className="section-title">My Works</h1>
-
+  
+      <div className="portfolio-desc" onClick={handleFooterClick}>
+        Way more to come... Let's make a project together!
+      </div>
+  
       <div className="portfolio-grid">
         {projects.map((project, index) => (
           <div
@@ -105,6 +113,7 @@ function Portfolio() {
       </div>
     </section>
   );
+  
 }
 
 export default Portfolio;

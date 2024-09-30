@@ -7,8 +7,34 @@
 .section-title {
   font-size: 2.5rem;
   color: var(--primary-color);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem; /* Reduced bottom margin */
   opacity: 1;
+}
+
+.portfolio-desc {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem; /* Space between footer and grid */
+  cursor: pointer;
+  transform: translateY(-35px);
+  transition: transform 0.5s ease, opacity 0.5s ease, color 0.3s ease;
+}
+
+.portfolio-desc:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .portfolio-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-desc {
+    font-size: 0.9rem;
+  }
 }
 
 .portfolio-grid {
