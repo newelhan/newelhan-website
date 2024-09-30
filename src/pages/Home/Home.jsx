@@ -117,7 +117,7 @@ function Home() {
         >
           <h2>Wait.. Who even are you?</h2>
           <p>
-            I’m Ethan, a regular guy from Jakarta, Indonesia. I love learning
+            Hey, my name is Ethan, pretty much a regular guy. I love learning
             new things and exploring things out of my area. I try to learn as
             many things as possible but still try to master one skill which is
             web development.
