@@ -13,29 +13,40 @@ function Portfolio() {
   const cardsRef = useRef([]);
 
   useEffect(() => {
-    // Intro animation for the entire section
-    gsap.from(portfolioRef.current, {
-      opacity: 0,
-      y: 100,
-      duration: 1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: portfolioRef.current,
-        start: 'top 80%',
-      },
-    });
+    // Animate the entire section into view
+    gsap.fromTo(
+      portfolioRef.current,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: portfolioRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
 
-    gsap.from(cardsRef.current, {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1.2,
-      stagger: 0.3,
-      ease: 'elastic.out(1, 0.75)',
-      scrollTrigger: {
-        trigger: portfolioRef.current,
-        start: 'top 70%',
-      },
-    });
+    // Staggered animation for the cards
+    gsap.fromTo(
+      cardsRef.current,
+      { opacity: 0, scale: 0.9, y: 50 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: portfolioRef.current,
+          start: 'top 70%',
+        },
+      }
+    );
   }, []);
 
   const projects = [
