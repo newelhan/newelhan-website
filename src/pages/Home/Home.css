@@ -18,6 +18,7 @@
   width: auto;
   height: auto;
   z-index: 0;
+  opacity: 0.20;
   object-fit: cover;
 }
 
@@ -40,6 +41,27 @@
   border-top: 20px solid var(--primary-color);
   cursor: pointer;
   animation: bounce 7s infinite;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 106px;
+}
+
+.hero-wave .shape-fill {
+  fill: var(--secondary-color);
 }
 
 @keyframes bounce {
