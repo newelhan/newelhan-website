@@ -79,7 +79,7 @@ function Portfolio() {
       <h1 className="section-title">My Works</h1>
   
       <div className="portfolio-desc" onClick={handleFooterClick}>
-        Way more to come... Let's make a project together!
+        Way more to fit here... Let's make a project together!
       </div>
   
       <div className="portfolio-grid">
