@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import heroBg from '../../assets/videos/hero-bg.mp4';
 import './Home.css';
 
 function Home() {
@@ -91,11 +92,22 @@ function Home() {
   return (
     <>
       <section className="hero-section" id="home">
-        <div className="hero-content">
-          <h1 ref={heroTitleRef} className="hero-title">Hi, I'm Ethan</h1>
-          <p ref={heroSubtitleRef} className="hero-subtitle typing-animation"></p>
-        </div>
-        <div className="down-arrow"></div>
+      {/* Video background */}
+      <video className="hero-video" autoPlay loop muted>
+        <source src={heroBg} type="video/mp4" />
+      </video>
+      
+      <div className="hero-content">
+        <h1 ref={heroTitleRef} className="hero-title">Hi, I'm Ethan</h1>
+        <p ref={heroSubtitleRef} className="hero-subtitle typing-animation"></p>
+      </div>
+      <div className="down-arrow"></div>
+
+      <div className="hero-wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+        </svg>
+      </div>
       </section>
 
       <section className="about-section" id="about">
@@ -122,7 +134,7 @@ function Home() {
             my best in producing clean + efficient code and always strive for the
             best user experience. Beyond coding, I’m deeply invested in
             calisthenics, where I enjoy pushing my physical limits, and I
-            challenge my mind with competitive chess.
+            challenge my mind with some chess.
           </p>
         </div>
 
